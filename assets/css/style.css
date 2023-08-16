@@ -229,6 +229,21 @@ body {
   border-radius: var(--radius-4);
 }
 
+.poster-box {
+  background-image: url("../images/poster-bg-icon.png");
+  aspect-ratio: 2 / 3;
+}
+
+.poster-box,
+.video-card {
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+  background-color: var(--banner-background);
+  border-radius: var(--radius-16);
+  overflow: hidden;
+}
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -528,4 +543,41 @@ body {
 
 .banner .btn:is(:hover, :focus-visible) {
   box-shadow: var(--shadow-2);
+}
+
+.slider-control {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 0;
+  border-radius: var(--radius-16) 0 0 var(--radius-16);
+  user-select: none;
+  padding: 4px 0 4px 4px;
+  overflow-x: auto;
+}
+
+.slider-control::-webkit-scrollbar {
+  display: none;
+}
+
+.control-inner {
+  display: flex;
+  gap: 12px;
+}
+
+.control-inner::after {
+  content: "";
+  min-width: 12px;
+}
+
+.slider-control .slider-item {
+  width: 100px;
+  border-radius: var(--radius-8);
+  flex-shrink: 0;
+  filter: brightness(0.4);
+}
+
+.slider-control .active {
+  filter: brightness(1);
+  box-shadow: var(--shadow-1);
 }
