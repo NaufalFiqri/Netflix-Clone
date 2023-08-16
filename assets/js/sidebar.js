@@ -19,7 +19,7 @@ export function sidebar() {
   const sidebarInner = document.createElement("div");
   sidebarInner.classList.add("sidebar-inner");
 
-  sidebarInner.innerHTML = html`
+  sidebarInner.innerHTML = `
     <div class="sidebar-list">
       <p class="title">Genre</p>
     </div>
