@@ -146,13 +146,39 @@ body {
   display: none;
 }
 
-.search-wrapper.searching::before { display: block; }
+.search-wrapper.searching::before {
+  display: block;
+}
 
 @keyframes loading {
-    0% { transform: rotate(0); }
-    100% { transform: rotate(1turn); }
+  0% {
+    transform: rotate(0);
   }
-  
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.heading,
+.title-large,
+.title {
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.5px;
+}
+
+.title {
+  font-size: var(--fs-title);
+}
+
+.heading {
+  color: var(--white);
+  font-size: var(--fs-heading);
+  line-height: 1.2;
+}
+
+.title-large {
+  font-size: var(--fs-title-lg);
+}
 
 /*-----------------------------------*\
   #HEADER
@@ -238,7 +264,9 @@ body {
   color: var(--on-surface-variant);
 }
 
-.search-field:hover { box-shadow: 0 0 0 2px var(--on-surface-variant); }
+.search-field:hover {
+  box-shadow: 0 0 0 2px var(--on-surface-variant);
+}
 
 .search-field:focus {
   box-shadow: 0 0 0 2px var(--on-surface);
@@ -254,5 +282,77 @@ body {
   transition: var(--transition-short);
 }
 
-.search-wrapper:focus-within .leading-icon { opacity: 0; }
+.search-wrapper:focus-within .leading-icon {
+  opacity: 0;
+}
 
+/*-----------------------------------*\
+  #SIDEBAR
+\*-----------------------------------*/
+
+.sidebar {
+  position: absolute;
+  background-color: var(--background);
+  top: 96px;
+  bottom: 0;
+  left: -340px;
+  max-width: 340px;
+  width: 100%;
+  border-block-start: 1px solid var(--banner-background);
+  overflow-y: overlay;
+  z-index: 4;
+  visibility: hidden;
+  transition: var(--transition-long);
+}
+
+.sidebar.active {
+  transform: translateX(340px);
+  visibility: visible;
+}
+
+.sidebar-inner {
+  display: grid;
+  gap: 20px;
+  padding-block: 36px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.sidebar:is(:hover, :focus-within)::-webkit-scrollbar-thumb {
+  background-color: var(--banner-background);
+}
+
+.sidebar::-webkit-scrollbar-button {
+  height: 16px;
+}
+
+.sidebar-list,
+.sidebar-footer {
+  padding-inline: 36px;
+}
+
+.sidebar-link {
+  color: var(--on-surface-variant);
+  transition: var(--transition-short);
+}
+
+.sidebar-link:is(:hover, :focus-visible) {
+  color: var(--on-background);
+}
+
+.sidebar-list {
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-list .title {
+  margin-block-end: 8px;
+}
+
+.sidebar-footer {
+  border-block-start: 1px solid var(--banner-background);
+  padding-block-start: 28px;
+  margin-block-start: 16px;
+}
