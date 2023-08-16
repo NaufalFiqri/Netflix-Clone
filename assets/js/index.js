@@ -37,6 +37,7 @@ fetchDataFromServer(
   }
 );
 
+// HERO BANNER
 const heroBanner = function ({ results: movieList }) {
   const banner = document.createElement("section");
   banner.classList.add("banner");
@@ -116,4 +117,31 @@ const heroBanner = function ({ results: movieList }) {
   addHeroSlide();
 };
 
-// Hero Slider
+// HERO SLIDER
+const addHeroSlide = function () {
+  const sliderItems = document.querySelectorAll("[slider-item]");
+  const sliderControls = document.querySelectorAll("[slider-control]");
+
+  let lastSliderItem = sliderItems[0];
+  let lastSliderControl = sliderControls[0];
+
+  lastSliderItem.classList.add("active");
+  lastSliderControl.classList.add("active");
+  //activating the first movie slide
+
+  const sliderStart = function () {
+    lastSliderItem.classList.remove("active");
+    lastSliderControl.classList.remove("active");
+
+    // `this` == slider-control
+    sliderItems[Number(this.getAttribute("slider-control"))].classList.add(
+      "active"
+    );
+    this.classList.add("active");
+
+    lastSliderItem = sliderItems[Number(this.getAttribute("slider-control"))];
+    lastSliderControl = this;
+  };
+
+  addEventOnElements(sliderControls, "click", sliderStart);
+};
