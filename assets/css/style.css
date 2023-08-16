@@ -156,6 +156,20 @@ body {
   display: block;
 }
 
+.load-more {
+  background-color: var(--primary-variant);
+  margin-inline: auto;
+  margin-block: 36px 60px;
+}
+
+.load-more:is(:hover, :focus-visible) {
+  --primary-variant: hsla(350, 67%, 39%, 1);
+}
+
+.load-more.loading::before {
+  display: block;
+}
+
 @keyframes loading {
   0% {
     transform: rotate(0);
@@ -721,4 +735,23 @@ body {
 .movie-detail .list-name {
   color: var(--text-color);
   min-width: 112px;
+}
+
+/*-----------------------------------*\
+  #MOVIE LIST PAGE
+\*-----------------------------------*/
+
+.genre-list .title-wrapper {
+  margin-block-end: 56px;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 16px;
+  row-gap: 20px;
+}
+
+:is(.genre-list, .search-modal) :is(.movie-card, .card-banner) {
+  width: 100%;
 }
