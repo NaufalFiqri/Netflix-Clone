@@ -244,6 +244,41 @@ body {
   overflow: hidden;
 }
 
+.title-wrapper {
+  margin-block-end: 24px;
+}
+
+.slider-list {
+  margin-inline: -20px;
+  overflow-x: overlay;
+  padding-block-end: 16px;
+  margin-block-end: -16px;
+}
+
+.slider-list::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.slider-list:is(:hover, :focus-within)::-webkit-scrollbar-thumb {
+  background-color: var(--banner-background);
+}
+
+.slider-list::-webkit-scrollbar-button {
+  width: 20px;
+}
+
+.slider-list .slider-inner {
+  position: relative;
+  display: flex;
+  gap: 16px;
+}
+
+.slider-list .slider-inner::before,
+.slider-list .slider-inner::after {
+  content: "";
+  min-width: 4px;
+}
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -580,4 +615,35 @@ body {
 .slider-control .active {
   filter: brightness(1);
   box-shadow: var(--shadow-1);
+}
+
+/* MOVIE LIST */
+.movie-list {
+  padding-block-start: 32px;
+}
+
+.movie-card {
+  position: relative;
+  width: 200px;
+}
+
+.movie-card .card-banner {
+  width: 200px;
+}
+
+.movie-card .title {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-block: 8px 4px;
+}
+
+.movie-card .meta-list {
+  justify-content: space-between;
+}
+
+.movie-card .card-btn {
+  position: absolute;
+  inset: 0;
 }
