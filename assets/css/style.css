@@ -27,12 +27,12 @@
   --ff-dm-sans: "DM Sans", sans-serif;
 
   /* font size */
-  --fs-heading: 64px;
-  --fs-title-lg: 41.6px;
-  --fs-title: 32px;
-  --fs-body: 28.8px;
-  --fs-button: 24px;
-  --fs-label: 22.4px;
+  --fs-heading: 4rem;
+  --fs-title-lg: 2.6rem;
+  --fs-title: 2rem;
+  --fs-body: 1.8rem;
+  --fs-button: 1.5rem;
+  --fs-label: 1.4rem;
 
   /* font weight */
   --weight-bold: 700;
@@ -355,4 +355,13 @@ body {
   border-block-start: 1px solid var(--banner-background);
   padding-block-start: 28px;
   margin-block-start: 16px;
+}
+
+.copyright {
+  color: var(--on-surface-variant);
+  margin-block-end: 20px;
+}
+
+.copyright a {
+  display: inline-block;
 }
