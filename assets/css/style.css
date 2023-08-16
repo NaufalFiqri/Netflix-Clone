@@ -4,22 +4,22 @@
 
 :root {
   /* colours */
-  --background: #0d1a1b;
-  --banner-background: #2c3335;
+  --background: #0f1115;
+  --banner-background: #313036;
   --white-alpha-20: #ffffff33;
-  --on-background: #ebf2f5;
-  --on-surface: #ebf2f5;
-  --on-surface-variant: #2b2e31;
-  --primary: #dc3545;
-  --primary-variant: #a6323e;
-  --rating-color: #ff634b;
-  --surface: #212121;
-  --text-color: #999ea1;
+  --on-background: #e5eeff;
+  --on-surface: #eae5ff;
+  --on-surface-variant: #6f6f71;
+  --primary: #db0028;
+  --primary-variant: #d82c4b;
+  --rating-color: #fab700;
+  --surface: #1a1820;
+  --text-color: #959499;
   --white: #ffffff;
 
   /* gradient colors */
-  --banner-overlay: 90deg, #0d1a1b 0%, rgba(13, 26, 27, 0.5) 100%;
-  --bottom-overlay: 180deg, rgba(33, 33, 33, 0) 0, #212121 100%;
+  --banner-overlay: 90deg, rgb(15, 17, 21) 0%, rgba(15, 17, 21, 0.5) 100%;
+  --bottom-overlay: 180deg, rgba(26, 24, 32, 0), rgb(26, 24, 32);
 
   /* TYPOGRAPHY */
 
@@ -134,8 +134,35 @@ body {
   #REUSED STYLE
 \*-----------------------------------*/
 
-
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
+
+.search-box{
+    display: none;
+}
+
+.header {
+  position: relative;
+  padding-block: 24px;
+  padding-inline: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.header .logo {
+  margin-inline-end: auto;
+}
+
+.search-btn,
+.menu-btn {
+  padding: 12px;
+}
+
+.search-btn {
+  background-color: var(--banner-background);
+  border-radius: var(--radius-8);
+}
 
