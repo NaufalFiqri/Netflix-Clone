@@ -134,6 +134,26 @@ body {
   #REUSED STYLE
 \*-----------------------------------*/
 
+.search-wrapper::before,
+.load-more::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--white);
+  border-radius: var(--radius-24);
+  border-inline-end-color: transparent;
+  animation: loading 500ms linear infinite;
+  display: none;
+}
+
+.search-wrapper.searching::before { display: block; }
+
+@keyframes loading {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(1turn); }
+  }
+  
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
