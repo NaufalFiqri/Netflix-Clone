@@ -293,6 +293,19 @@ body {
   min-width: 4px;
 }
 
+/* .container::after, */
+.search-modal::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-image: linear-gradient(var(--bottom-overlay));
+  z-index: 1;
+  pointer-events: none;
+}
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -526,18 +539,6 @@ body {
   z-index: 1;
 }
 
-.container::after {
-  content: "";
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background-image: linear-gradient(var(--bottom-overlay));
-  z-index: 1;
-  pointer-events: none;
-}
-
 /* BANNER */
 
 .banner {
@@ -754,4 +755,31 @@ body {
 
 :is(.genre-list, .search-modal) :is(.movie-card, .card-banner) {
   width: 100%;
+}
+
+/*-----------------------------------*\
+  #SEARCH MODAL
+\*-----------------------------------*/
+
+.search-modal {
+  position: fixed;
+  top: 96px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--surface);
+  padding: 50px 24px;
+  overflow-y: overlay;
+  z-index: 4;
+  display: none;
+}
+
+.search-modal.active {
+  display: block;
+}
+
+.search-modal .label {
+  color: var(--primary-variant);
+  font-weight: var(--weight-bold);
+  margin-block-end: 8px;
 }
