@@ -6,10 +6,10 @@
 
     <!-- Primary meta tags -->
     <title>Movflix</title>
-    <meta name="title" content="Movflix" />
+    <meta name="title" content="Tvflix" />
     <meta
       name="description"
-      content="Movflix is a popular movie app made by Naufal Fiqri."
+      content="Tvflix is a popular movie app made by Naufal Fiqri."
     />
 
     <!-- favicon -->
@@ -32,8 +32,30 @@
   </head>
 
   <body>
-
     <!-- #HEADER -->
-    <header class="header"></header>
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <img
+          src="./assets/images/logo.svg"
+          width="140"
+          height="32"
+          alt="Tvflix home"
+        />
+      </a>
+
+      <div class="search" search-box>
+        <div class="search-wrapper" search-wrapper>
+          <input
+            type="text"
+            name="search"
+            aria-label="search movies"
+            placeholder="Search any movies..."
+            class="search-field" search-field
+          />
+          <img src="./assets/images/search.png" alt="search" class="leading-icon">
+        </div>
+        
+      </div>
+    </header>
   </body>
 </html>
