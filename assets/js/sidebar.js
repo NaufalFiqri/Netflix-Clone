@@ -34,14 +34,16 @@ export function sidebar() {
         onclick='getMovieList("with_original_language=ms", "Malay")'>Malay</a>
       <a href="./movie-list.html" menu-close class="sidebar-link"
         onclick='getMovieList("with_original_language=hi", "Hindi")'>Hindi</a>
+    </div>
+
 
 
     <div class="sidebar-footer">
       <p class="copyright">
         Copyright 2023
-        <a href="https://naufalfiqri.netlify.app">Naufal Fiqri</a>
+        <a href="https://naufalfiqri.netlify.app" target="_blank">Naufal Fiqri</a>
       </p>
-      <img src="./assets/images/tmdb-logo.png" alt="the movie database logo" />
+      <img src="./assets/images/tmdb-logo.png" width="130" height="17" alt="the movie database logo" />
     </div>
   `;
 
