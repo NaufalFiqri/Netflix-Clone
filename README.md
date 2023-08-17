@@ -10,6 +10,20 @@
 
 <h2>Project Screenshots:</h2>
 
+*    Home page
+![Tvflix Desktop Demo](./Screenshots/Screenshot_146.png)
+
+
+*    Genre/Language Filter Page
+![Tvflix Desktop Demo](./Screenshots/Screenshot_147.png)
+
+
+*    Search Result Page
+![Tvflix Desktop Demo](./Screenshots/Screenshot_148.png)
+
+
+*    Movie Detail Page
+![Tvflix Desktop Demo](./Screenshots/Screenshot_149.png)
 
   
 <h2>🧐 Features</h2>
