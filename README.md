@@ -1,4 +1,4 @@
-<h1 align="center" id="title">Netflix-clone</h1>
+<h1 align="center" id="title">Tvflix</h1>
 
 <p align="center"><img src="https://socialify.git.ci/NaufalFiqri/Netflix-Clone/image?language=1&amp;name=1&amp;owner=1&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
 
