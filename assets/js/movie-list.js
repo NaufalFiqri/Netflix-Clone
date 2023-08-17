@@ -3,6 +3,8 @@
 import { api_key, fetchDataFromServer } from "./api.js";
 import { sidebar } from "./sidebar.js";
 import { createMovieCard } from "./movie-card.js";
+import { search } from "./search.js";
+
 
 const genreName = window.localStorage.getItem("genreName");
 const urlParam = window.localStorage.getItem("urlParam");
@@ -71,3 +73,5 @@ fetchDataFromServer(
       });
   }
 );
+
+search();
