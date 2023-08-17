@@ -35,9 +35,7 @@ fetchDataFromServer(
     <button class="btn load-more" load-more>Load More</button>
   `;
 
-    /**
-     * add movie card based on fetched item
-     */
+    // add movie card based on fetched item
     for (const movie of movieList) {
       const movieCard = createMovieCard(movie);
 
@@ -46,9 +44,7 @@ fetchDataFromServer(
 
     pageContent.appendChild(movieListElem);
 
-    /**
-     * load more button functionality
-     */
+    // load more button
     document
       .querySelector("[load-more]")
       .addEventListener("click", function () {
